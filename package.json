@@ -94,11 +94,12 @@
     "isstream": "~0.1.2",
     "object.omit": "~2.0.0",
     "object.pick": "~1.2.0",
-    "request": "~2.81.0",
+    "request": "~2.82.0",
     "solr-client": "~0.6.0",
     "string": "3.3.3",
     "vcap_services": "~0.3.0",
-    "websocket": "~1.0.22"
+    "websocket": "~1.0.22",
+    "snyk": "^1.83.0"
   },
   "engines": {
     "node": ">=4"
@@ -117,6 +118,9 @@
     "browserify": "browserify index.js --standalone Watson --outfile dist/watson.js",
     "watchify": "watchify index.js --standalone Watson --outfile dist/watson.js --debug --verbose",
     "minify": "uglifyjs --compress --mangle --screw-ie8 dist/watson.js --output dist/watson.min.js --preamble \"// Watson Developer Cloud\n// JavaScript SDK$npm_package_version\n// Generated at `date`\n// Copyright IBM ($npm_package_license)\n// $npm_package_homepage\"",
-    "build": "npm run browserify && npm run minify"
-  }
+    "build": "npm run browserify && npm run minify",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
