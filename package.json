@@ -86,7 +86,7 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
-    "async": "^2.0.1",
+    "async": "^3.2.2",
     "buffer-from": "^0.1.1",
     "cookie": "~0.3.1",
     "csv-stringify": "~1.0.2",
